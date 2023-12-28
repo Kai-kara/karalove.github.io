@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XOXO/contact</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <script>
+        function xoxo(){
+            let name = document.getElementById("name").value;
+            let lname = document.getElementById("lover").value;
+            calc = name.length + lname.length * 100;
+            result.innerHTML = calc;
+
+            //removing data that has been entered
+            document.getElementById("name").value = null;
+            document.getElementById("lover").value = null;
+
+            //relationship tag
+            rel.innerHTML = calc;
+
+            if(rel.innerHTML = calc){
+                relate.style.display = "block";
+            }
+
+        }
+
+        function sent(){
+            document.getElementById("name").value = null;
+            document.getElementById("email").value = null;
+            document.getElementById("phone").value = null;
+            document.getElementById("message").value = null;
+        }
+    </script>
+
+    <div class="container">
+        <p id="relate">Your Relationship is <span id="rel"></span>%</p>
+        <div class="content2">
+            <form action="https://smartforms.dev/submit/658adb545df1517d48d8bcb9" method="POST">
+                <label id="dev" for="Send Message">Message Developer</label>
+                <input id="name" type="text" name="Name" placeholder="Enter your name">
+                <input id="email" type="text" name="Email" placeholder="Email ID">
+                <input id="phone" type="text" name="Phone" placeholder="Phone no.">
+                <textarea id="message" name="Message" id="message"  rows="5"></textarea>
+                <input id="bun" type="submit" value="Send"> <a id="home" href="index.html">Home</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
